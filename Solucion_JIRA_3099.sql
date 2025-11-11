@@ -217,6 +217,7 @@ n.epitetoinfraespecifico2catvalido=if(tv.NombreSubInfra='',n.epitetoinfraespecif
 n.catdiccinfraespecie2catvalido=if(tv.SistClasCatDiccNombreSubInfra='',n.catdiccinfraespecie2catvalido,tv.SistClasCatDiccNombreSubInfra),
 n.estatusinfraespecie2catvalido=if(tv.EstatusCategSubInfra='',n.estatusinfraespecie2catvalido,tv.EstatusCategSubInfra),
 n.autoranioinfraespecie2catvalido=if(tv.AutoridadCategSubInfra='',n.autoranioinfraespecie2catvalido,tv.AutoridadCategSubInfra),
+n.comentarioscatvalido= ifnull(a.comentarioscatvalido_corregido,''),
 n.idnombrecatvalido=tv.IdCAT,
 n.cattaxcatvalido=tv.UltimaCategoriaTaxonomica,
 n.catalogocatvalido=tv.Fuente;
@@ -652,7 +653,7 @@ n.nombrevalidocatscat='',
 n.estatusvalidocatscat='',
 n.autoridadvalidocatscat='',
 n.gruposcat=t.gruposcat,
-n.idcol=''.
+n.idcol='',
 n.idcolvalido='',
 n.ultimafechaactualizacion=date_format(now(),'%Y-%m-%d');
 
@@ -773,6 +774,8 @@ n.categoriavalidocatscat= '',
 n.nombrevalidocatscat= '',
 n.estatusvalidocatscat= '',
 n.autoridadvalidocatscat= '',
+n.icol='',
+n.idcolvalido='',
 n.ultimafechaactualizacion=date_format(now(),'%Y-%m-%d');;
 
 

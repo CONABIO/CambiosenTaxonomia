@@ -549,23 +549,3 @@ n.ultimafechaactualizacion,n1.ultimafechaactualizacion,
 n.fechaactualizacion,n1.fechaactualizacion,
 n.version,n1.version
 from snibdtap.si_ousp_nombre_correcciones n inner join snib.nombre n1 on n.llavenombre=n1.llavenombre;
-
--- Actualizamos idcol y idcolvalido en la tabla nombrecatoflive
-
-/*update snibdtap.`#Actualiza_CompletamenteCOL` a inner join snib.nombre_catoflive c using(llavenombre)
-inner join snib.nombre_taxonomia n using(llavenombre)
-set c.idcol=a.idcol_corregido,
-c.idcol_valido=a.idcol_valido_corregido,
-c.estadoregistro=n.estadoregistro; */
-
-update snibdtap.`#Actualiza_CompletamenteCOL` a inner join snib.nombre_taxonomia n using(llavenombre)
-set n.idcol=a.idcol_corregido,
-n.idcolvalido=a.idcol_valido_corregido;
-
-update snibdtap.`#Actualiza_idnombrecat&comentarioscat_FaltaValidarTaxon` a inner join snib.nombre_taxonomia n using(llavenombre)
-set n.idcol='',
-n.idcolvalido='';
-
-update snibdtap.`#Elimina_validacion` a inner join snib.nombretaxonomia n using(llavenombre)
-set n.idcol='',
-n.idcolvalido='';
